@@ -147,7 +147,8 @@ Solo se admitirán entregas recibidas hasta el cierre de la clase 24, clase de E
 
 Se aceptará la entrega mediante la submisión de la URL de un repositorio de Github Privado, que haya compatido acceso a las siguientes cuentas:
 
-- Camada 1 - Profesor: xxxx - Cuenta de Github xxxx
+- Camada 1 - Profesor: Joan Gil - Cuenta de Github @joandvgv
+- Camada 2 - Profesor: Matias Rivas - Cuenta de Github @mrivasdh
 
 El link al Google Form para la submisión será enviado por el profesor a cargo de la comisión.
 
