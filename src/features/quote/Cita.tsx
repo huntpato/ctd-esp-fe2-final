@@ -1,14 +1,9 @@
 import { useState } from "react";
 import { shallowEqual } from "react-redux";
-import { Boton, Input, AutorCita, ContenedorCita, TextoCita } from "./styled";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
-import {
-  obtenerCitaDelEstado,
-  limpiar,
-  obtenerEstadoDelPedido,
-  obtenerCitaDeLaAPI,
-} from "./citaSlice";
+import { obtenerCitaDelEstado, limpiar, obtenerEstadoDelPedido, obtenerCitaDeLaAPI} from "./citaSlice";
 import { obtenerMensaje } from "./utils";
+import { Boton, Input, AutorCita, ContenedorCita, TextoCita } from "./styled";
 
 function Cita() {
   const [valorInput, setValorInput] = useState("");
