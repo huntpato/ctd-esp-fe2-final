@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { INoticiasNormalizadas } from '../Noticias';
+import { INoticiasNormalizadas } from '../types';
 import {
   BotonSuscribir,
   CloseButton,

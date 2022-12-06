@@ -39,8 +39,9 @@ describe("component <Cita />", () => {
             const inputSearch = screen.getByLabelText("Author Cita");
             userEvent.type(inputSearch, "3");
             await waitFor(() => expect(inputSearch).toHaveValue("3"));
-            userEvent.click(screen.getByLabelText("Obtener Cita"));
-
+            const button = screen.getByText(/obtener/i);
+            userEvent.click(button);
+            
             //screen.debug()
             expect(await screen.findByText("Por favor ingrese un nombre válido")).toBeInTheDocument();
         })

@@ -60,4 +60,3 @@ export const BioButton = styled.button<{ isActive?: boolean }>`
             : css``
     }
 `;
-  

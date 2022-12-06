@@ -34,18 +34,18 @@ const calculateMinutes = (now: Date, date: Date) => {
  * @returns an object with normalized news
  */
 
-export const NormalizedNews = (n: INoticias) => {
-  const titulo = titleFirstLettersToUpperCase(n.titulo);
+export const NormalizedNews = (news: INoticias) => {
+  const titulo = titleFirstLettersToUpperCase(news.titulo);
   const ahora = new Date();
-  const minutosTranscurridos = calculateMinutes(ahora, n.fecha);
+  const minutosTranscurridos = calculateMinutes(ahora, news.fecha);
 
   return {
-    id: n.id,
+    id: news.id,
     titulo,
-    descripcion: n.descripcion,
+    descripcion: news.descripcion,
     fecha: `Hace ${minutosTranscurridos} minutos`,
-    esPremium: n.esPremium,
-    imagen: n.imagen,
-    descripcionCorta: n.descripcion.substring(0, 100),
+    esPremium: news.esPremium,
+    imagen: news.imagen,
+    descripcionCorta: news.descripcion.substring(0, 100),
   };
 };

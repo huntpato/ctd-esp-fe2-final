@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import useToggle from '../../../hooks/useToggle';
 import Modal from '../Modal/Modal';
-import { INoticiasNormalizadas } from '../Noticias';
+import { INoticiasNormalizadas } from '../types';
 import {
   BotonLectura,
   DescripcionTarjetaNoticia,
