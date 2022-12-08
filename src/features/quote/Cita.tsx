@@ -1,13 +1,13 @@
-import { useState } from "react";
-import { shallowEqual } from "react-redux";
-import { useAppSelector, useAppDispatch } from "../../app/hooks";
-import { obtenerCitaDelEstado, limpiar, obtenerEstadoDelPedido, obtenerCitaDeLaAPI} from "./citaSlice";
-import { obtenerMensaje } from "./utils";
-import { Boton, Input, AutorCita, ContenedorCita, TextoCita } from "./styled";
+import { useState } from 'react';
+import { shallowEqual } from 'react-redux';
+import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { obtenerCitaDelEstado, limpiar, obtenerEstadoDelPedido, obtenerCitaDeLaAPI,} from './citaSlice';
+import { obtenerMensaje } from './utils';
+import { Boton, Input, AutorCita, ContenedorCita, TextoCita } from './styled';
 
 function Cita() {
-  const [valorInput, setValorInput] = useState("");
-  const { cita = "", personaje = "" } =
+  const [valorInput, setValorInput] = useState('');
+  const { cita = '', personaje = '' } =
     useAppSelector(obtenerCitaDelEstado, shallowEqual) || {};
   const estadoPedido = useAppSelector(obtenerEstadoDelPedido);
 
@@ -17,7 +17,7 @@ function Cita() {
 
   const onClickBorrar = () => {
     dispatch(limpiar());
-    setValorInput("");
+    setValorInput('');
   };
 
   return (
@@ -31,10 +31,10 @@ function Cita() {
         placeholder="Ingresa el nombre del autor"
       />
       <Boton
-        aria-label={valorInput ? "Obtener Cita" : "Obtener cita aleatoria"}
+        aria-label={valorInput ? 'Obtener Cita' : 'Obtener cita aleatoria'}
         onClick={onClickObtenerCita}
       >
-        {valorInput ? "Obtener Cita" : "Obtener cita aleatoria"}
+        {valorInput ? 'Obtener Cita' : 'Obtener cita aleatoria'}
       </Boton>
       <Boton aria-label="Borrar" onClick={onClickBorrar} secondary={true}>
         Borrar

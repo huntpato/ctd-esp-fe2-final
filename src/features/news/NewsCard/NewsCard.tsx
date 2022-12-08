@@ -21,7 +21,7 @@ const NewsCard: FC<NewsCardProps> = ({ news }) => {
   return (
     <>
       <TarjetaNoticia>
-        <ImagenTarjetaNoticia src={news.imagen} />
+        <ImagenTarjetaNoticia src={news.imagen} alt="imagen noticia" />
         <TituloTarjetaNoticia>{news.titulo}</TituloTarjetaNoticia>
         <FechaTarjetaNoticia>{news.fecha}</FechaTarjetaNoticia>
         <DescripcionTarjetaNoticia>
