@@ -1,22 +1,23 @@
 import { useEffect, useState } from 'react';
 import { obtenerNoticias } from './fakeRest';
 import NewsCard from './NewsCard/NewsCard';
-import { ContenedorNoticias, ListaNoticias, TituloNoticias } from './styled';
 import { INoticiasNormalizadas } from './types';
 import { NormalizedNews } from './utils';
+import { ContenedorNoticias, ListaNoticias, TituloNoticias } from './styled';
 
 const Noticias = () => {
   const [noticias, setNoticias] = useState<INoticiasNormalizadas[]>([]);
 
-  useEffect(() => {
-    const obtenerInformacion = async () => {
-      const respuesta = await obtenerNoticias();
+  const obtenerInformacion = async () => {
+    const respuesta = await obtenerNoticias();
 
-      const data = respuesta.map((news) => {
-        return NormalizedNews(news);
-      });
-      setNoticias(data);
-    };
+    const data = respuesta.map((news) => {
+      return NormalizedNews(news);
+    });
+    setNoticias(data);
+  };
+
+  useEffect(() => {
     obtenerInformacion();
   }, []);
 

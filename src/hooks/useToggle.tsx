@@ -5,7 +5,7 @@ type UseToggleType = {
     toggle: () => void;
 };
 
-const useToggle = ( initialValue =  false) : UseToggleType => {
+const useToggle = ( initialValue =  false ) : UseToggleType => {
 
     const [ isOpen, setIsOpen] = useState(initialValue);
 

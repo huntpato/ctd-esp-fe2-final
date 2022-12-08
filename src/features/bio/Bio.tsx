@@ -13,6 +13,7 @@ const Bio = () => {
   const crearBotones = () => {
     return Object.keys(INFO_SIMPSONS).map((nombre: string) => (
       <BioButton 
+        aria-label={nombre}      
         key={nombre as string}
         onClick={() => onClick(nombre as NombresSimpsons)}
         isActive={(bioActiva.id === nombre) as boolean}
